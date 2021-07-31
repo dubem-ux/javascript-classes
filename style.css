@@ -1,0 +1,163 @@
+ img{ 
+    width: 150px;
+    height: 100px;
+
+} 
+#canvas{
+    border: 2px solid blue;
+    margin: 150px 0 0 -80em;
+}
+#show{
+position: absolute;
+left: 20em;
+top: 1.3em;
+color: white;
+z-index: 2;
+font-size: 2em;
+}
+select,input{
+    margin-top: -40em;
+    margin-left: -10em;
+    width: 6em;
+    height: 3em;
+    border: none;
+}
+/* input{
+    margin-left: 10em;
+} */
+#button{
+    margin-top: -30em;
+    margin-left: -141em;
+    height: 2em;
+}
+#colour{
+    margin-left: -35em;
+}
+#radius{
+    margin-left: -40em;
+}
+figcaption{
+    font-size: 1.2em;
+    color: white;
+}
+figure{
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    border: 0.5em solid blue;
+    border-radius: 15px;
+    box-shadow: 5px 10px rgb(153, 149, 149);
+    margin: 10px 10px 40px 10px;
+
+    /* margin-left: -15px; */
+    padding: 0;
+}
+#gif{
+    width: 10em;
+    height: 10em;
+    position: relative;
+    top: calc((100vh - 10em)/2);
+    left:calc((100vw - 10em)/2);
+
+}
+#pics2,#pics4,#pics6,#pics8,#pics10{
+    margin-left: -10px;
+}
+
+body{
+    background-color: rgb(1, 1, 44);
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    grid-template: 'pics0 pics1'20%
+                   'pics2 pics3'20%
+                   'pics4 pics5'20%
+                   'pics6 pics7'20%
+                   'pics8 pics9'20% 
+                   /1fr 1fr ;
+    place-items: center;
+}
+
+
+.module{
+    background-color:  rgb(190, 190, 190);
+    color: red;
+    position: relative;
+    height: 4em;
+    width: 9em;
+    padding-top: 2em;
+    text-align: center;
+    top: calc((100vh - 4em)/2);
+    left: calc((100vw - 9em)/2);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (min-width:500px){
+     body{
+        grid-template: 'pics0 pics1 pics2'25%
+                       'pics3 pics4 pics5'25%
+                       'pics6 pics7 pics8'25%
+                       'pics9 pics9 pics9'25%
+                       /1fr 1fr 1fr;
+    }
+    figure{
+        width: 200px;
+    }
+    #pics2,#pics3,#pics5,#pics6,#pics8,#pics9{
+        margin-left: 15px;
+    } 
+
+    img#gif{
+        width: 20em !important;
+        height: 20em;
+        left: 12em;
+        top: 13em;
+
+        /* border: 5px solid red; */
+       /* margin: 0 0 0 50px; */
+        
+    }
+    .module{
+        left: 10em;
+        top: 12em;
+        height: 5em;
+        width: 10em;
+    }
+}
+@media screen and (min-width:1000px){
+     body{
+        grid-template: 'pics0 pics1 pics2 pics3 pics4'
+                       'pics5 pics6 pics7 pics8 pics9'                  
+    } 
+    img{ 
+        width: 250px;
+        height: 100px;
+    
+    } 
+    figure{
+        width: 250px;
+        height: 150px;
+    }
+
+    img#gif{
+        width: 20em !important;
+        height: 20em;
+        top: calc((100vh - 25em)/2);
+        left: calc((100vw - 32em)/2);
+        
+    }
+    .module{
+        /* left: 27em;
+        top: 11em; */
+        height: 5em;
+        width: 10em;
+        top: calc((100vh - 7em)/2);
+        left: calc((100vw - 20em)/2);
+        
+    }
+}
